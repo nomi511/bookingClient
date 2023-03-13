@@ -1,0 +1,636 @@
+$primaryColor: #004580;
+$secondaryColor: orange;
+$blue: #0071c2;
+$textColor: azure;
+$searchText: gray;
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.navbar {
+    height: 50px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primaryColor;
+
+    .navContainer {
+        width: 1024px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .logodiv{
+            
+            span {
+                color: $textColor;
+                font-size: 35px;
+                font-weight: 500;
+                .logo{
+                    color: $secondaryColor;
+                }
+            }
+        }
+
+
+        .navBtns{
+
+            .navbtn{
+                width: 100px;
+                height: 30px;
+                margin-top: 10px;
+                margin-left: 10px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .navbtn:hover{
+                background-color: $secondaryColor;
+                color: $textColor;
+            }
+        }
+    }
+}
+
+
+
+
+.header {
+    background-color: $primaryColor;
+    color: $textColor;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .headDiv{
+        width: 1024px;
+        margin: 20px 0px 100px 0px;
+
+        .topRow{
+            display: flex;
+            gap: 40px;
+
+            .headItem {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                cursor: pointer;
+            }
+
+            .active {
+                border: 1px solid $textColor;
+                padding: 10px 20px 10px 20px;
+
+                border-radius: 20px;
+            }
+
+        }
+
+        .headtitle {
+            margin-top: 20px;
+        }
+
+        .headDesc {
+            margin: 20px 0;
+        }
+
+        .headbtn {
+            background-color: $blue;
+            color: $textColor;
+            font-weight: 500;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        .headSearch {
+            height: 30px;
+            background-color: $textColor;
+            border: 3px solid $secondaryColor;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 0px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            max-width: 1024px;
+
+            .headerIcon{
+                color: $searchText;
+            }
+
+            .headerSearchText{
+                color: $searchText;
+                cursor: pointer;
+            }
+
+            .headSearchItem{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .date{
+                    position: absolute;
+                    top:50px;
+                    z-index: 2;
+                }
+            }
+
+            .headerSearchInput{
+                border: none;
+                outline: none;
+                background-color: $textColor;
+            }
+        }
+
+    }
+
+    .headDiv.listMode{
+        margin: 20px 0px 30px 0px;
+    }
+
+}
+
+
+
+.featured{
+    width: 100%;
+    max-width: 1024px;
+    display:flex;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 1;
+
+    .featuredItem{
+        position:relative;
+        color:$textColor;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 250px;
+        cursor: pointer;
+        
+        .featuredImg{
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .featuredTitles{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+    }
+}
+
+
+.pList{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+
+    .pListItem{
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+
+        .pListImg{
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .pListTitles>h1{
+            font-size: 18px;
+        }
+
+        .pListTitles>h2{
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+}
+
+
+
+.fp{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+
+    .fpItem{
+        flex: 1;
+        gap: 10px;
+        cursor: pointer;
+
+        .fpItemImg{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .fpName{
+            font-weight: bold;
+            display: block;
+        }
+
+        .fpCity{
+            font-weight: 300;
+            display: block;
+        }
+
+        .fpPrice{
+            font-weight: 500;
+        }
+
+        .fpRating>button{
+            background-color: $primaryColor;
+            color: $textColor;
+            border: none;
+            margin-right: 10px;
+            font-weight: bold;
+            border-radius: 5px 5px 5px 0px;
+        }
+
+        .fpRating>span{
+            font-size: 14px;
+        }
+    }
+}
+
+
+
+
+.ml{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primaryColor;
+    padding: 50px;
+    color: $textColor;
+
+    .mailListContainer{
+        margin-top: 20px;
+    }
+
+    .mailListContainer>input{
+        width: 300px;
+        height: 30px;
+        padding: 10px;
+        border:none;
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+
+    .mailListContainer>button{
+        height: 50px;
+        width: 150px;
+        color: $textColor;
+        background-color: $blue;
+        font-weight: 500;
+        border:none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+
+
+.homeContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    .homeTitle{
+        width: 1024px;
+        font-size: 20px;
+    }
+}
+
+
+
+.footer{
+    width: 100%;
+    max-width: 1024px;
+    font-size: 12px;
+
+    .fLists{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        .fList{
+            list-style: none;
+            padding: 0px;
+
+            .fListItem{
+                margin-bottom: 10px;
+                color: $blue;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .fText{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------------------
+
+.listContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+
+    .listWrapper{
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        gap: 20px;
+
+
+        .listSearch{
+            flex:1;
+            background-color: $secondaryColor;
+            padding: 20px;
+            border-radius: 10px;
+            position: sticky;
+            top: 10px;
+            height: max-content;
+            
+            .lSearchTitle{
+                font-size: 20px;
+                color: #555;
+                margin-bottom: 10px;
+            }
+
+            .lsItem{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-top: 10px;
+                position: relative;
+
+                .date{
+                    position: absolute;
+                    margin-top: 70px;
+                    z-index: 2;
+                }
+            }
+
+            .lsItem>label{
+                font-size: 12px;
+            }
+
+            .lsItem>input{
+                height: 30px;
+                border: none;
+                padding: 5px;
+                background-color: $textColor;
+                border-radius: 5px;
+            }
+
+            .lsItem>span{
+                height: 30px;
+                border: none;
+                padding: 5px;
+                background-color: $textColor;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            .lsSBtn>button{
+                padding: 10px;
+                background-color: $blue;
+                border: none;
+                color:$textColor;
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 30px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .listResult{
+            flex:3;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+
+
+
+
+.searchItem{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(215, 215, 215);
+    border-radius: 10px;
+    margin-top: 20px;
+
+    .searchItemWrapper{
+        display: flex;
+        gap: 10px;
+
+        img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .titleSection{
+            width: 100%;
+            display: flex;
+            flex:1;
+            gap: 10px;
+
+            h3{
+                flex: 2;
+                color: $blue;
+            }
+
+            .titleReview{
+                display: flex;
+            }
+
+            .titleMood{
+                display: flex;
+                flex-direction: column;
+                flex:1;
+
+                .itemMood{
+                    font-weight: 400;
+                }
+
+                .totalReviews{
+                    font-size: 12px;
+                    color: gray
+                }
+            }
+
+            .reviewNum{
+                height: 25px;
+                width: 25px;
+                text-align: center;
+                margin-left: 10px;
+                background-color: $primaryColor;
+                padding: 5px;
+                color: $textColor;
+                border-radius: 10px 10px 10px 0px;
+            }
+        }
+
+
+        .siDistance{
+            font-size: 12px;
+        }
+
+        .siDesc{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+
+            .siDescLeft{
+                margin: 10px;
+                flex: 2;
+                border-left: 2px solid lightgray;
+                padding-left: 10px;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+
+                .siSubtitle{
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+
+                .siCancel{
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: green;
+                    margin-top: 10px;
+                }
+
+                .siCancelSubtitle{
+                    color: green;
+                }
+            }
+
+            .siDetails{
+                flex:1;
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+
+                span{
+                    font-size: 12px;
+                    color: rgb(75, 75, 75);
+                }
+
+                h2{
+                    font-weight: 500;
+                }
+
+                button{
+                    border: none;
+                    height: 35px;
+                    background-color: $blue;
+                    color: $textColor;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.options{
+    position: absolute;
+    top: 50px;
+    max-height: 140px;
+    background-color: $textColor;
+    color: gray;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.4);
+    z-index: 2;
+
+
+    .optionItem{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        height:30px;
+        max-height: 30px;
+        align-items: center;
+
+        .optionCounter{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-height: 30px;
+            max-width: 100px;
+
+            .optionCounterButton{
+                width: 30px;
+                height: 30px;
+                border: 1px solid $blue;
+                color: $blue;
+                cursor: pointer;
+                background-color: $textColor;
+            }
+
+            .optionCounterButton:disabled{
+                cursor: not-allowed;
+                background-color: $textColor;
+            }
+        }
+    }
+}
+
+.lsOptions{
+    position: relative;
+}
+
+.lsSearchOptions{
+    width: 250px;
+    position: absolute;
+    top:0px
+}

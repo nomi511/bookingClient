@@ -1,0 +1,582 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+} 
+
+.navbar {
+  height: 50px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #004580;
+}
+
+.navbar .navContainer {
+  width: 1024px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar .navContainer .logodiv span {
+  color: azure;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.navbar .navContainer .logodiv span .logo {
+  color: orange;
+}
+
+.navbar .navContainer .navBtns .navbtn {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar .navContainer .navBtns .navbtn:hover {
+  background-color: orange;
+  color: azure;
+}
+
+.header {
+  background-color: #004580;
+  color: azure;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.header .headDiv {
+  width: 1024px;
+  margin: 20px 0px 100px 0px;
+}
+
+.header .headDiv .topRow {
+  display: flex;
+  gap: 40px;
+}
+
+.header .headDiv .topRow .headItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.header .headDiv .topRow .active {
+  border: 1px solid azure;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+}
+
+.header .headDiv .headtitle {
+  margin-top: 20px;
+}
+
+.header .headDiv .headDesc {
+  margin: 20px 0;
+}
+
+.header .headDiv .headbtn {
+  background-color: #0071c2;
+  color: azure;
+  font-weight: 500;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.header .headDiv .headSearch {
+  height: 30px;
+  background-color: azure;
+  border: 3px solid orange;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.header .headDiv .headSearch .headerIcon {
+  color: gray;
+}
+
+.header .headDiv .headSearch .headerSearchText {
+  color: gray;
+  cursor: pointer;
+}
+
+.header .headDiv .headSearch .headSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .headDiv .headSearch .headSearchItem .date {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+}
+
+.header .headDiv .headSearch .headerSearchInput {
+  border: none;
+  outline: none;
+  background-color: azure;
+}
+
+.header .headDiv.listMode {
+  margin: 20px 0px 30px 0px;
+}
+
+.featured {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 1;
+}
+
+.featured .featuredItem {
+  position: relative;
+  color: azure;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 250px;
+  cursor: pointer;
+}
+
+.featured .featuredItem .featuredImg {
+  width: 100%;
+  object-fit: cover;
+}
+
+.featured .featuredItem .featuredTitles {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.pList {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+
+.pList .pListItem {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.pList .pListItem .pListImg {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.pList .pListItem .pListTitles > h1 {
+  font-size: 18px;
+}
+
+.pList .pListItem .pListTitles > h2 {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.fp {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.fp .fpItem {
+  flex: 1;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.fp .fpItem .fpItemImg {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.fp .fpItem .fpName {
+  font-weight: bold;
+  display: block;
+}
+
+.fp .fpItem .fpCity {
+  font-weight: 300;
+  display: block;
+}
+
+.fp .fpItem .fpPrice {
+  font-weight: 500;
+}
+
+.fp .fpItem .fpRating > button {
+  background-color: #004580;
+  color: azure;
+  border: none;
+  margin-right: 10px;
+  font-weight: bold;
+  border-radius: 5px 5px 5px 0px;
+}
+
+.fp .fpItem .fpRating > span {
+  font-size: 14px;
+}
+
+.ml {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #004580;
+  padding: 50px;
+  color: azure;
+}
+
+.ml .mailListContainer {
+  margin-top: 20px;
+}
+
+.ml .mailListContainer > input {
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  border: none;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.ml .mailListContainer > button {
+  height: 50px;
+  width: 150px;
+  color: azure;
+  background-color: #0071c2;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.homeContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.homeContainer .homeTitle {
+  width: 1024px;
+  font-size: 20px;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1024px;
+  font-size: 12px;
+}
+
+.footer .fLists {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.footer .fLists .fList {
+  list-style: none;
+  padding: 0px;
+}
+
+.footer .fLists .fList .fListItem {
+  margin-bottom: 10px;
+  color: #0071c2;
+  cursor: pointer;
+}
+
+.footer .fText {
+  margin-bottom: 20px;
+}
+
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.listContainer .listWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+
+.listContainer .listWrapper .listSearch {
+  flex: 1;
+  background-color: orange;
+  padding: 20px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  height: max-content;
+}
+
+.listContainer .listWrapper .listSearch .lSearchTitle {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.listContainer .listWrapper .listSearch .lsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.listContainer .listWrapper .listSearch .lsItem .date {
+  position: absolute;
+  margin-top: 70px;
+  z-index: 2;
+}
+
+.listContainer .listWrapper .listSearch .lsItem > label {
+  font-size: 12px;
+}
+
+.listContainer .listWrapper .listSearch .lsItem > input {
+  height: 30px;
+  border: none;
+  padding: 5px;
+  background-color: azure;
+  border-radius: 5px;
+}
+
+.listContainer .listWrapper .listSearch .lsItem > span {
+  height: 30px;
+  border: none;
+  padding: 5px;
+  background-color: azure;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.listContainer .listWrapper .listSearch .lsSBtn > button {
+  padding: 10px;
+  background-color: #0071c2;
+  border: none;
+  color: azure;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.listContainer .listWrapper .listResult {
+  flex: 3;
+  margin-bottom: 50px;
+}
+
+.searchItem {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.searchItem .searchItemWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.searchItem .searchItemWrapper img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.searchItem .searchItemWrapper .titleSection {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.searchItem .searchItemWrapper .titleSection h3 {
+  flex: 2;
+  color: #0071c2;
+}
+
+.searchItem .searchItemWrapper .titleSection .titleReview {
+  display: flex;
+}
+
+.searchItem .searchItemWrapper .titleSection .titleMood {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.searchItem .searchItemWrapper .titleSection .titleMood .itemMood {
+  font-weight: 400;
+}
+
+.searchItem .searchItemWrapper .titleSection .titleMood .totalReviews {
+  font-size: 12px;
+  color: gray;
+}
+
+.searchItem .searchItemWrapper .titleSection .reviewNum {
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  margin-left: 10px;
+  background-color: #004580;
+  padding: 5px;
+  color: azure;
+  border-radius: 10px 10px 10px 0px;
+}
+
+.searchItem .searchItemWrapper .siDistance {
+  font-size: 12px;
+}
+
+.searchItem .searchItemWrapper .siDesc {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.searchItem .searchItemWrapper .siDesc .siDescLeft {
+  margin: 10px;
+  flex: 2;
+  border-left: 2px solid lightgray;
+  padding-left: 10px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchItem .searchItemWrapper .siDesc .siDescLeft .siSubtitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.searchItem .searchItemWrapper .siDesc .siDescLeft .siCancel {
+  font-size: 14px;
+  font-weight: bold;
+  color: green;
+  margin-top: 10px;
+}
+
+.searchItem .searchItemWrapper .siDesc .siDescLeft .siCancelSubtitle {
+  color: green;
+}
+
+.searchItem .searchItemWrapper .siDesc .siDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.searchItem .searchItemWrapper .siDesc .siDetails span {
+  font-size: 12px;
+  color: #4b4b4b;
+}
+
+.searchItem .searchItemWrapper .siDesc .siDetails h2 {
+  font-weight: 500;
+}
+
+.searchItem .searchItemWrapper .siDesc .siDetails button {
+  border: none;
+  height: 35px;
+  background-color: #0071c2;
+  color: azure;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.options {
+  position: absolute;
+  top: 50px;
+  max-height: 140px;
+  background-color: azure;
+  color: gray;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.options .optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  height: 30px;
+  max-height: 30px;
+  align-items: center;
+}
+
+.options .optionItem .optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-height: 30px;
+  max-width: 100px;
+}
+
+.options .optionItem .optionCounter .optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: azure;
+}
+
+.options .optionItem .optionCounter .optionCounterButton:disabled {
+  cursor: not-allowed;
+  background-color: azure;
+}
+
+.lsOptions {
+  position: relative;
+}
+
+.lsSearchOptions {
+  width: 250px;
+  position: absolute;
+  top: 0px;
+}
+/*# sourceMappingURL=pages.css.map */
